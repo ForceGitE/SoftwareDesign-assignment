@@ -1,0 +1,38 @@
+Assignement Quiz:
+
+ca = correct answer.
+wa = wrong answer.
+
+Q1: How many steps in the V-model ?
+A1: ca=10, wa = 7, 9.
+
+Q2: Name First step in Waterfall Lifecycle ?
+A2: ca=Requirement, wa= system design, Implementation.
+
+Q3: Name 1 key OOp concept ?
+A3: ca=Message Passing, wa= chatter, cross-talk.
+
+Q4: Which are a type of methods in OOP ?
+A4: ca=Hidden Method, wa=cooking methods, no assignment methods.
+
+Q5: Did you think this Quiz was good ? 
+A5: ca= yes,yes. wa= no.
+
+Q6: What testing is done first, White box testing or black box testing
+A6: ca=black box testing. wa=white box testing
+//Integration Teading section
+Q7: If all our modules work individually, why do we doubt that they'll work
+    when we put them together ?
+A7: ca=because interfacing is tricky. wa= its grand no problems,  
+
+Q8: What is regression Testing. Is it ?
+A8: ca=Are tests to ensure that changes do not un-intended behaviour or additional errors.
+    wa= set of activities that ensure that software is correct., a test done by the developer.
+
+Q9: what is alpha testing?
+A9: ca= a test that is conducted at the developers site by a customer. wa= the correct test for software
+    , beginners guide to testing.
+
+Q10: What is beta testing ?
+A10: ca= a test that is condcuted at one or more customer sites by the end user of the software, 
+     wa= free product, bored.
