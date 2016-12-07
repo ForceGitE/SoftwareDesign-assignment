@@ -1,0 +1,50 @@
+//=================================================================
+class logIn{
+
+public:
+Login(string studentname, string password){ loginname = studentname, loginpassword = password }
+	
+	bool check(){ 
+			if(storedname == loginname && storedpassword == loginpassword) 
+			return true; 
+		}
+
+private:
+
+	string loginname;
+	string loginpassword;
+
+	string storedname;	//vector names simplified to a single string.
+	string storedpassword; 	//vector passswords simplified.
+}
+
+//=======================================================================
+class Report{
+
+public:
+	Report(string studentname) {reportname = studentname, rightanswer = 0, wronganswer = 0}
+
+	void updateRA();
+	void updateWA();
+
+private:
+	string reportname;
+	int rightanswer;
+	int wronganswer;
+}
+
+
+main....
+
+
+string studentname , pass; 		//type the log in detail
+cin>>studentname>>pass;
+
+
+logIn login(studentname, password);			//log in constructor 
+ 
+	if( login.check(); ) 			//checks the details from what the constructor passed into the class
+
+		{ 
+			Report reportObj(studentname);
+		};	//if the check is true student report profile is created.
