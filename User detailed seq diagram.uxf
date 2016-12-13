@@ -29,7 +29,7 @@ fontsize=10
     <id>UMLGeneric</id>
     <coordinates>
       <x>180</x>
-      <y>150</y>
+      <y>140</y>
       <w>100</w>
       <h>30</h>
     </coordinates>
@@ -40,7 +40,7 @@ fontsize=10
     <id>UMLGeneric</id>
     <coordinates>
       <x>450</x>
-      <y>150</y>
+      <y>140</y>
       <w>100</w>
       <h>30</h>
     </coordinates>
@@ -51,7 +51,7 @@ fontsize=10
     <id>UMLGeneric</id>
     <coordinates>
       <x>330</x>
-      <y>150</y>
+      <y>140</y>
       <w>100</w>
       <h>30</h>
     </coordinates>
@@ -62,7 +62,7 @@ fontsize=10
     <id>UMLGeneric</id>
     <coordinates>
       <x>590</x>
-      <y>150</y>
+      <y>140</y>
       <w>100</w>
       <h>30</h>
     </coordinates>
@@ -73,7 +73,7 @@ fontsize=10
     <id>UMLGeneric</id>
     <coordinates>
       <x>220</x>
-      <y>180</y>
+      <y>170</y>
       <w>20</w>
       <h>620</h>
     </coordinates>
@@ -84,7 +84,7 @@ fontsize=10
     <id>Relation</id>
     <coordinates>
       <x>490</x>
-      <y>170</y>
+      <y>160</y>
       <w>30</w>
       <h>170</h>
     </coordinates>
@@ -95,7 +95,7 @@ fontsize=10
     <id>Relation</id>
     <coordinates>
       <x>630</x>
-      <y>170</y>
+      <y>160</y>
       <w>30</w>
       <h>320</h>
     </coordinates>
@@ -106,7 +106,7 @@ fontsize=10
     <id>Relation</id>
     <coordinates>
       <x>370</x>
-      <y>170</y>
+      <y>160</y>
       <w>30</w>
       <h>60</h>
     </coordinates>
@@ -117,7 +117,7 @@ fontsize=10
     <id>Relation</id>
     <coordinates>
       <x>230</x>
-      <y>190</y>
+      <y>180</y>
       <w>170</w>
       <h>40</h>
     </coordinates>
@@ -129,7 +129,7 @@ type details</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>370</x>
-      <y>290</y>
+      <y>280</y>
       <w>30</w>
       <h>540</h>
     </coordinates>
@@ -140,7 +140,7 @@ type details</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>380</x>
-      <y>220</y>
+      <y>210</y>
       <w>100</w>
       <h>80</h>
     </coordinates>
@@ -152,7 +152,7 @@ check()</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>370</x>
-      <y>210</y>
+      <y>200</y>
       <w>20</w>
       <h>90</h>
     </coordinates>
@@ -163,7 +163,7 @@ check()</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>370</x>
-      <y>310</y>
+      <y>300</y>
       <w>140</w>
       <h>40</h>
     </coordinates>
@@ -175,7 +175,7 @@ get_login_name()</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>490</x>
-      <y>320</y>
+      <y>310</y>
       <w>20</w>
       <h>90</h>
     </coordinates>
@@ -186,7 +186,7 @@ get_login_name()</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>500</x>
-      <y>330</y>
+      <y>320</y>
       <w>120</w>
       <h>80</h>
     </coordinates>
@@ -201,7 +201,7 @@ attempt = 1</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>490</x>
-      <y>400</y>
+      <y>390</y>
       <w>30</w>
       <h>430</h>
     </coordinates>
@@ -212,7 +212,7 @@ attempt = 1</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>630</x>
-      <y>470</y>
+      <y>460</y>
       <w>20</w>
       <h>60</h>
     </coordinates>
@@ -223,7 +223,7 @@ attempt = 1</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>640</x>
-      <y>460</y>
+      <y>450</y>
       <w>130</w>
       <h>80</h>
     </coordinates>
@@ -235,7 +235,7 @@ get question()</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>630</x>
-      <y>520</y>
+      <y>510</y>
       <w>30</w>
       <h>90</h>
     </coordinates>
@@ -246,7 +246,7 @@ get question()</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>230</x>
-      <y>520</y>
+      <y>510</y>
       <w>430</w>
       <h>40</h>
     </coordinates>
@@ -258,7 +258,7 @@ Ask_question()</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>230</x>
-      <y>580</y>
+      <y>570</y>
       <w>420</w>
       <h>40</h>
     </coordinates>
@@ -270,7 +270,7 @@ check_Answer</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>630</x>
-      <y>590</y>
+      <y>580</y>
       <w>20</w>
       <h>70</h>
     </coordinates>
@@ -281,7 +281,7 @@ check_Answer</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>640</x>
-      <y>590</y>
+      <y>580</y>
       <w>120</w>
       <h>80</h>
     </coordinates>
@@ -293,7 +293,7 @@ update_Ra()</panel_attributes>
     <id>UMLFrame</id>
     <coordinates>
       <x>160</x>
-      <y>450</y>
+      <y>440</y>
       <w>630</w>
       <h>230</h>
     </coordinates>
@@ -304,7 +304,7 @@ update_Ra()</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>630</x>
-      <y>650</y>
+      <y>640</y>
       <w>30</w>
       <h>180</h>
     </coordinates>
@@ -315,7 +315,7 @@ update_Ra()</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>230</x>
-      <y>680</y>
+      <y>670</y>
       <w>430</w>
       <h>40</h>
     </coordinates>
@@ -327,7 +327,7 @@ Print_report()</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>630</x>
-      <y>700</y>
+      <y>690</y>
       <w>120</w>
       <h>80</h>
     </coordinates>
@@ -341,7 +341,7 @@ get Ra()</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>230</x>
-      <y>770</y>
+      <y>760</y>
       <w>430</w>
       <h>40</h>
     </coordinates>
