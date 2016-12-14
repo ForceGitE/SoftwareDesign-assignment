@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1481698755 source:c:\users\peter\desktop\try\main.cpp
+	<iostream>
+	"vector"
+	"tinyxml2.h"
+	"std_lib_facilities.h"
+
+1481013568 source:c:\users\peter\desktop\try\tinyxml2.cpp
+	"tinyxml2.h"
+	<new>
+	<stddef.h>
+	<stdarg.h>
+	<cstddef>
+	<cstdarg>
+
+1481013568 c:\users\peter\desktop\try\tinyxml2.h
+	<ctype.h>
+	<limits.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stddef.h>
+	<cctype>
+	<climits>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<stdint.h>
+	<android/log.h>
+	<assert.h>
+
