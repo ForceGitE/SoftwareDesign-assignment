@@ -273,6 +273,11 @@ int main()
 {
 
     string studentname,password;
+
+    cout<<"log in names: peter warren eoin ciaran admin\npasswords pp ww ee cc admin\n\n"
+        <<"the createXML in main is commented out as we do not want to create a file every time we run main\n"
+        <<"we only want to read the file everytime"<<endl;
+
     while(cin>>studentname>>password){
 
     cout<<"enter log in details"<<endl;
