@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.2">
+  <zoom_level>8</zoom_level>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>144</x>
+      <y>24</y>
+      <w>168</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>Login
+--
+string LoginName
+string Pass
+string studentname
+--
+Login()
+checkLog()
+checkName()
+checkPass()
+getLogName</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>472</x>
+      <y>24</y>
+      <w>176</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>Student
+--
+string StudentName
+int score
+--
+Student()
+setStudentName()
+getStudnetName()
+updateScore()
+getScore()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>752</x>
+      <y>24</y>
+      <w>168</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>Quiz
+--
+vector string Questions
+vector int Answer
+--
+Quiz()
+parse()
+askQ()
+typeAnswers()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>264</x>
+      <y>264</y>
+      <w>168</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>AdminReport
+--
+string AdminName
+--
+Admin()
+setName()
+printReport()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>512</x>
+      <y>264</y>
+      <w>168</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>Report
+--
+string ReportName
+--
+Report()
+printScore()
+pkrintOverallReport()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>288</x>
+      <y>72</y>
+      <w>200</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>24;24;184;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>624</x>
+      <y>72</y>
+      <w>144</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>24;24;128;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>536</x>
+      <y>160</y>
+      <w>40</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m2=1</panel_attributes>
+    <additional_attributes>24;24;24;104</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>280</x>
+      <y>144</y>
+      <w>40</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m2=1
+</panel_attributes>
+    <additional_attributes>24;24;24;120</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>424</x>
+      <y>328</y>
+      <w>104</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+</diagram>
