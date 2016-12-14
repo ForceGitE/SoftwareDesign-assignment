@@ -37,8 +37,8 @@ public:
         string a[]= {"warren","peter","eoin","ciaran"};
         string *p;
 
-        p = std::find (a, a+3, name);
-        if (p != a+3)
+        p = std::find (a, a+4, name);
+        if (p != a+4)
         {
             return true;
         }
@@ -54,8 +54,8 @@ public:
         string a[]= {"ww","pp","ee","cc"};
         string *p;
 
-        p = std::find (a, a+3, pass);
-        if (p != a+3)
+        p = std::find (a, a+4, pass);
+        if (p != a+4)
         {
             return true;
         }
@@ -271,10 +271,11 @@ void creatXML()
 
 int main()
 {
+
     string studentname,password;
-    cin>>studentname>>password;
+    while(cin>>studentname>>password){
 
-
+    cout<<"enter log in details"<<endl;
 
     LogIn login(studentname,password);
     if(login.checkLog())
@@ -287,12 +288,14 @@ int main()
 
         studentObj = quiz.getStudentObj();
 
-        cout<<"students name is \n"<<studentObj.getName()<<"\nscore was \n"<<studentObj.getScore()<<endl;
+        cout<<"students name is \n"<<studentObj.getName()<<"\nscore was \n"<<studentObj.getScore()<<"\n"<<endl;
 
 
 
     }
-    else if(login.checkAdmin()){cout<<"admin checked"<<endl;}
+    else if(login.checkAdmin()){cout<<"admin checked"<<endl; return 0;}
+
+    }
 
     return 0;
 }
