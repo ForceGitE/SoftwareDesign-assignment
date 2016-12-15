@@ -134,10 +134,10 @@ public:
     Quiz(Student studentquiz)
     {
         studentattempt=studentquiz;
-        beginParsing();
+        if(beginParsing()){cout<<"parsing succes"<<endl;}
     }
 
-    void beginParsing()
+    bool beginParsing()
     {
         XMLDocument xmlDoc;
         xmlDoc.LoadFile("QuestionBank.xml");
@@ -167,9 +167,10 @@ public:
 
 
         }
+        return true;
     };
 
-    string askQuestion()
+    void askQuestion()
     {
         while(!mQuestionList.empty())
         {
@@ -186,7 +187,7 @@ public:
             mAnswerList.pop_back();
 
         }
-        return "end";
+
     };
 
     void typeAnswer(int answer)
@@ -219,6 +220,7 @@ Report(Student Obj)
 
     saveStudent();
     saveOverall();
+
 }
 
 void saveStudent(){
@@ -232,7 +234,7 @@ ofs<<name<<"\t"<<score<<"\n";
         error("can’t open output file ",name);
     }
 
- cout<< "Result(s) outputed to file called:" << name;
+ cout<< "Result(s) outputed to file called:" << name<<"\n";
 
 
     ofs.close();
@@ -249,29 +251,51 @@ if (!ofs)
         error("can’t open output file ",Admin);
     }
 
+
+
     ofs.close();
 
 }
 
+void getReport(){
+/*
+ifstream ifs(Admin.c_str(),ios::in);
+
+ifs>>results;
+cout<<results<<"/n";
+
+if (!ifs)
+{
+        error("can’t open output file ",Admin);
+}
+
+   ifs.close();
+
+*/
+
+}
 protected:
 
     string name;
     string Admin;
+    string results;
     int score;
 
 };
 class Admin{
 
-public:
-
-    Admin(Report AdminReport)
+/*Admin(Report report)
+{
+    copiedreport=report;
+}
+    void displayReport()
     {
-
+        copiedreport.getReport();
     }
 
 protected:
-
-
+    report copiedreport;
+*/
 };
 
 void creatXML()
@@ -357,8 +381,6 @@ int main()
 
     while(cin>>studentname>>password){
 
-    cout<<"enter log in details"<<endl;
-
     LogIn login(studentname,password);
     if(login.checkLog())
     {
@@ -377,9 +399,17 @@ int main()
 
 
     }
-    else if(login.checkAdmin()){cout<<"admin checked"<<endl; return 0;}
+    else if(login.checkAdmin())
+        {
+            cout<<"admin checked"<<endl;
+            cout<< "Overalls Result(s) outputed to file called: Admin"<<endl;
+            return 0;
 
+        }
+
+    cout<<"enter log in details"<<endl;
     }
+
 
     return 0;
 }
