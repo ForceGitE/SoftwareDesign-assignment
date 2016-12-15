@@ -1,0 +1,53 @@
+//ths is the gtest harness for major paths.
+
+#include "gtest/gtest.h"
+
+main...
+
+Login logOneInput(warren,ww); //instance of Log in classes
+Login logTwoInput(peter,pp);
+Login logThreeInput(eoin,ee);
+Login logFourInput(ciaran,cc);
+
+Login logAdmin(admin,admin);
+
+Quiz quiz();
+
+(LoginTest, studentTest) //student log in test
+{
+	EXPECT_EQ(true,logOneInput.chechkLog();)
+	EXPECT_EQ(true,logTwoInput.chechkLog();)
+	EXPECT_EQ(true,logThereeInput.chechkLog();)
+	EXPECT_EQ(true,logFourInput.chechkLog();)
+}
+
+(LoginTest, adminTest) //admin test
+{
+	EXPECT_EQ(true,logAdmin.chechkLog();)
+	
+}
+
+(QuizTest, parsingTest) //test for parsing succesion
+{
+	Expect_EQ(true,quiz.beginParsing);
+	//edit parsing to return true in the quiz class
+}
+
+
+(QuizTest, inputTest) //input test
+{
+	Expect_EQ(1,quiz.typeanswer(1));
+	Expect_EQ(1,quiz.typeanswer(1));
+	Expect_EQ(1,quiz.typeanswer(1));
+	Expect_EQ(1,quiz.typeanswer(1));
+	Expect_EQ(2,quiz.typeanswer(2));
+	Expect_EQ(1,quiz.typeanswer(1));
+	Expect_EQ(3,quiz.typeanswer(3));
+	Expect_EQ(2,quiz.typeanswer(2));
+	Expect_EQ(1,quiz.typeanswer(1));
+	Expect_EQ(10,quiz.typeanswer(10));
+
+}
+
+
+
