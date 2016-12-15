@@ -71,9 +71,16 @@ public:
     }
     //virtual ~LogIn();
 
-      bool checkAdmin()
+    bool checkAdmin()
     {
-        if(name=="admin"&&pass=="admin"){return true;}else{return false;}
+        if(name=="admin"&&pass=="admin")
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
 
@@ -134,7 +141,10 @@ public:
     Quiz(Student studentquiz)
     {
         studentattempt=studentquiz;
-        if(beginParsing()){cout<<"parsing succes"<<endl;}
+        if(beginParsing())
+        {
+            cout<<"\nparsing succes\n"<<endl;
+        }
     }
 
     bool beginParsing()
@@ -184,7 +194,7 @@ public:
             typeAnswer(answer);
 
             mQuestionList.pop_back();
-            mAnswerList.pop_back();
+            //mAnswerList.pop_back();
 
         }
 
@@ -194,10 +204,23 @@ public:
     {
         int outputA = mAnswerList.back();
         if(answer==outputA)
-        { cout<<"answer is correct\n"<<endl; studentattempt.updateScore();  }else{cout<<"not correct\n"<<endl;}
+        {
+            cout<<"answer is correct\n"<<endl;
+            studentattempt.updateScore();
+
+        }
+        else
+        {
+            cout<<"not correct\n"<<endl;
+
+        }
+        mAnswerList.pop_back();
     };
 
-    Student getStudentObj(){return studentattempt;}
+    Student getStudentObj()
+    {
+        return studentattempt;
+    }
 
 protected:
 
@@ -208,72 +231,76 @@ protected:
 
 };
 
-class Report{
+class Report
+{
 public:
 
-Report()  {}
-Report(Student Obj)
-{
-    name = Obj.getName();
-    score = Obj.getScore();
-    Admin = "Admin";
-
-    saveStudent();
-    saveOverall();
-
-}
-
-void saveStudent(){
-
-ofstream ofs(name.c_str(),ios::app);
-
-ofs<<name<<"\t"<<score<<"\n";
-
- if (!ofs)
+    Report()  {}
+    Report(Student Obj)
     {
-        error("can’t open output file ",name);
+        name = Obj.getName();
+        score = Obj.getScore();
+        Admin = "Admin";
+
+        saveStudent();
+        saveOverall();
+
     }
 
- cout<< "Result(s) outputed to file called:" << name<<"\n";
-
-
-    ofs.close();
-}
-
-void saveOverall(){
-
-ofstream ofs(Admin.c_str(),ios::app);
-
-ofs<<name<<"\t"<<score<<"\n";
-
-if (!ofs)
+    void saveStudent()
     {
-        error("can’t open output file ",Admin);
+
+        ofstream ofs(name.c_str(),ios::app);
+
+        ofs<<name<<"\t"<<score<<"\n";
+
+        if (!ofs)
+        {
+            error("can’t open output file ",name);
+        }
+
+        cout<< "Result(s) outputed to file called:" << name<<"\n";
+
+
+        ofs.close();
     }
 
+    void saveOverall()
+    {
+
+        ofstream ofs(Admin.c_str(),ios::app);
+
+        ofs<<name<<"\t"<<score<<"\n";
+
+        if (!ofs)
+        {
+            error("can’t open output file ",Admin);
+        }
 
 
-    ofs.close();
 
-}
+        ofs.close();
 
-void getReport(){
-/*
-ifstream ifs(Admin.c_str(),ios::in);
+    }
 
-ifs>>results;
-cout<<results<<"/n";
+    void getReport()
+    {
+        /*
+        ifstream ifs(Admin.c_str(),ios::in);
 
-if (!ifs)
-{
-        error("can’t open output file ",Admin);
-}
+        ifs>>results;
+        cout<<results<<"/n";
 
-   ifs.close();
+        if (!ifs)
+        {
+                error("can’t open output file ",Admin);
+        }
 
-*/
+           ifs.close();
 
-}
+        */
+
+    }
 protected:
 
     string name;
@@ -282,20 +309,21 @@ protected:
     int score;
 
 };
-class Admin{
-
-/*Admin(Report report)
+class Admin
 {
-    copiedreport=report;
-}
-    void displayReport()
-    {
-        copiedreport.getReport();
-    }
 
-protected:
-    report copiedreport;
-*/
+    /*Admin(Report report)
+    {
+        copiedreport=report;
+    }
+        void displayReport()
+        {
+            copiedreport.getReport();
+        }
+
+    protected:
+        report copiedreport;
+    */
 };
 
 void creatXML()
@@ -309,56 +337,56 @@ void creatXML()
     XMLElement * pElement = xmlDoc.NewElement("SWQD");//new element made
     //for(int i=0; i<10; i++)
     //{
-        XMLElement * pQuestionElement = xmlDoc.NewElement("Question"); //new element made
-        pQuestionElement->SetAttribute("answer",10);
-        pQuestionElement->SetText("Q10: How many steps in the V-model ? 10, 7 or 9 ?");
-        pElement->InsertEndChild(pQuestionElement);//attaches the pListElement as subchild
+    XMLElement * pQuestionElement = xmlDoc.NewElement("Question"); //new element made
+    pQuestionElement->SetAttribute("answer",10);
+    pQuestionElement->SetText("Q10: How many steps in the V-model ? 10, 7 or 9 ?");
+    pElement->InsertEndChild(pQuestionElement);//attaches the pListElement as subchild
 
-        pQuestionElement = xmlDoc.NewElement("Question"); //new element made
-        pQuestionElement->SetAttribute("answer",1);
-        pQuestionElement->SetText("Q9: Name First step in Waterfall Lifecycle ? 1 Requirement, 2 system design or 3 Implementation.");
-        pElement->InsertEndChild(pQuestionElement);//attaches the pListElement as subchild
+    pQuestionElement = xmlDoc.NewElement("Question"); //new element made
+    pQuestionElement->SetAttribute("answer",1);
+    pQuestionElement->SetText("Q9: Name First step in Waterfall Lifecycle ? 1 Requirement, 2 system design or 3 Implementation.");
+    pElement->InsertEndChild(pQuestionElement);//attaches the pListElement as subchild
 
-        pQuestionElement = xmlDoc.NewElement("Question"); //new element made
-        pQuestionElement->SetAttribute("answer",2);
-        pQuestionElement->SetText("Q8: Name 1 key OOp concept ? 1 chatter, 2 Message Passing or 3 cross-talk.");
-        pElement->InsertEndChild(pQuestionElement);//attaches the pListElement as subchild
+    pQuestionElement = xmlDoc.NewElement("Question"); //new element made
+    pQuestionElement->SetAttribute("answer",2);
+    pQuestionElement->SetText("Q8: Name 1 key OOp concept ? 1 chatter, 2 Message Passing or 3 cross-talk.");
+    pElement->InsertEndChild(pQuestionElement);//attaches the pListElement as subchild
 
-        pQuestionElement = xmlDoc.NewElement("Question"); //new element made
-        pQuestionElement->SetAttribute("answer",3);
-        pQuestionElement->SetText("Q7: Which are a type of methods in OOP ? 1 cooking methods, 2 no assignment methods or 3 Hidden Method.");
-        pElement->InsertEndChild(pQuestionElement);//attaches the pListElement as subchild
+    pQuestionElement = xmlDoc.NewElement("Question"); //new element made
+    pQuestionElement->SetAttribute("answer",3);
+    pQuestionElement->SetText("Q7: Which are a type of methods in OOP ? 1 cooking methods, 2 no assignment methods or 3 Hidden Method.");
+    pElement->InsertEndChild(pQuestionElement);//attaches the pListElement as subchild
 
-        pQuestionElement = xmlDoc.NewElement("Question"); //new element made
-        pQuestionElement->SetAttribute("answer",1);
-        pQuestionElement->SetText("Q6: Did you think this Quiz was good ? 1 yes or 2 no.");
-        pElement->InsertEndChild(pQuestionElement);//attaches the pListElement as subchild
+    pQuestionElement = xmlDoc.NewElement("Question"); //new element made
+    pQuestionElement->SetAttribute("answer",1);
+    pQuestionElement->SetText("Q6: Did you think this Quiz was good ? 1 yes or 2 no.");
+    pElement->InsertEndChild(pQuestionElement);//attaches the pListElement as subchild
 
-        pQuestionElement = xmlDoc.NewElement("Question"); //new element made
-        pQuestionElement->SetAttribute("answer",2);
-        pQuestionElement->SetText("Q5: What testing is done first, 1 White box testing or 2 black box testing. ");
-        pElement->InsertEndChild(pQuestionElement);//attaches the pListElement as subchild
+    pQuestionElement = xmlDoc.NewElement("Question"); //new element made
+    pQuestionElement->SetAttribute("answer",2);
+    pQuestionElement->SetText("Q5: What testing is done first, 1 White box testing or 2 black box testing. ");
+    pElement->InsertEndChild(pQuestionElement);//attaches the pListElement as subchild
 
-        pQuestionElement = xmlDoc.NewElement("Question"); //new element made
-        pQuestionElement->SetAttribute("answer",1);
-        pQuestionElement->SetText("Q4: If all our modules work individually, why do we doubt that they'll work when we put them together ? 1 because interfacing is tricky. 2 its grand no problems.");
-        pElement->InsertEndChild(pQuestionElement);//attaches the pListElement as subchild
+    pQuestionElement = xmlDoc.NewElement("Question"); //new element made
+    pQuestionElement->SetAttribute("answer",1);
+    pQuestionElement->SetText("Q4: If all our modules work individually, why do we doubt that they'll work when we put them together ? 1 because interfacing is tricky. 2 its grand no problems.");
+    pElement->InsertEndChild(pQuestionElement);//attaches the pListElement as subchild
 
 
-        pQuestionElement = xmlDoc.NewElement("Question"); //new element made
-        pQuestionElement->SetAttribute("answer",1);
-        pQuestionElement->SetText("Q3: What is regression Testing. Is it ? 1 Are tests to ensure that changes do not un-intended behaviour or additional errors. 2 set of activities that ensure that software is correct., a test done by the developer.");
-        pElement->InsertEndChild(pQuestionElement);//attaches the pListElement as subchild
+    pQuestionElement = xmlDoc.NewElement("Question"); //new element made
+    pQuestionElement->SetAttribute("answer",1);
+    pQuestionElement->SetText("Q3: What is regression Testing. Is it ? 1 Are tests to ensure that changes do not un-intended behaviour or additional errors. 2 set of activities that ensure that software is correct., a test done by the developer.");
+    pElement->InsertEndChild(pQuestionElement);//attaches the pListElement as subchild
 
-        pQuestionElement = xmlDoc.NewElement("Question"); //new element made
-        pQuestionElement->SetAttribute("answer",1);
-        pQuestionElement->SetText("Q2: what is alpha testing? 1 a test that is conducted at the developers site by a customer. 2 the correct test for software beginners guide to testing.");
-        pElement->InsertEndChild(pQuestionElement);//attaches the pListElement as subchild
+    pQuestionElement = xmlDoc.NewElement("Question"); //new element made
+    pQuestionElement->SetAttribute("answer",1);
+    pQuestionElement->SetText("Q2: what is alpha testing? 1 a test that is conducted at the developers site by a customer. 2 the correct test for software beginners guide to testing.");
+    pElement->InsertEndChild(pQuestionElement);//attaches the pListElement as subchild
 
-        pQuestionElement = xmlDoc.NewElement("Question"); //new element made
-        pQuestionElement->SetAttribute("answer",1);
-        pQuestionElement->SetText("Q1: What is beta testing ? 1 a test that is condcuted at one or more customer sites by the end user of the software 2 free product, bored.");
-        pElement->InsertEndChild(pQuestionElement);//attaches the pListElement as subchild
+    pQuestionElement = xmlDoc.NewElement("Question"); //new element made
+    pQuestionElement->SetAttribute("answer",1);
+    pQuestionElement->SetText("Q1: What is beta testing ? 1 a test that is condcuted at one or more customer sites by the end user of the software 2 free product, bored.");
+    pElement->InsertEndChild(pQuestionElement);//attaches the pListElement as subchild
 
     //}
 
@@ -375,31 +403,33 @@ int main()
 
     string studentname,password;
 
-    cout<<"log in names: peter warren eoin ciaran admin\npasswords pp ww ee cc admin\n\n"
+    cout<<"log in names: peter warren eoin ciaran admin\npasswords: pp ww ee cc admin\n\n"
         <<"the createXML in main is commented out as we do not want to create a file every time we run main\n"
         <<"we only want to read the file everytime"<<endl;
+        //type answer 1, 1, 1, 1, 2, 1, 3, 2, 1, 10 and you should get 10 perfect score
 
-    while(cin>>studentname>>password){
-
-    LogIn login(studentname,password);
-    if(login.checkLog())
+    while(cin>>studentname>>password)
     {
-        Student studentObj(login);
-        //creatXML(); //commented out as we dont want to create an XML file everytime the code runs
 
-        Quiz quiz(studentObj);
-        quiz.askQuestion();
+        LogIn login(studentname,password);
+        if(login.checkLog())
+        {
+            Student studentObj(login);
+            //creatXML(); //commented out as we dont want to create an XML file everytime the code runs
 
-        studentObj = quiz.getStudentObj();
+            Quiz quiz(studentObj);
+            quiz.askQuestion();
 
-        cout<<"students name is \n"<<studentObj.getName()<<"\nscore was \n"<<studentObj.getScore()<<"\n"<<endl;
+            studentObj = quiz.getStudentObj();
+
+            cout<<"students name is \n"<<studentObj.getName()<<"\nscore was \n"<<studentObj.getScore()<<"\n"<<endl;
 
 
-        Report report(studentObj);
+            Report report(studentObj);
 
 
-    }
-    else if(login.checkAdmin())
+        }
+        else if(login.checkAdmin())
         {
             cout<<"admin checked"<<endl;
             cout<< "Overalls Result(s) outputed to file called: Admin"<<endl;
@@ -407,7 +437,7 @@ int main()
 
         }
 
-    cout<<"enter log in details"<<endl;
+        cout<<"enter log in details"<<endl;
     }
 
 
