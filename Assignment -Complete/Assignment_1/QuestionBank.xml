@@ -1,0 +1,14 @@
+<Root>
+    <SWQD>
+        <Question answer="10">Q10: How many steps in the V-model ? 10, 7 or 9 ?</Question>
+        <Question answer="1">Q9: Name First step in Waterfall Lifecycle ? 1 Requirement, 2 system design or 3 Implementation.</Question>
+        <Question answer="2">Q8: Name 1 key OOp concept ? 1 chatter, 2 Message Passing or 3 cross-talk.</Question>
+        <Question answer="3">Q7: Which are a type of methods in OOP ? 1 cooking methods, 2 no assignment methods or 3 Hidden Method.</Question>
+        <Question answer="1">Q6: Did you think this Quiz was good ? 1 yes or 2 no.</Question>
+        <Question answer="2">Q5: What testing is done first, 1 White box testing or 2 black box testing. </Question>
+        <Question answer="1">Q4: If all our modules work individually, why do we doubt that they'll work when we put them together ? 1 because interfacing is tricky. 2 its grand no problems.</Question>
+        <Question answer="1">Q3: What is regression Testing. Is it ? 1 Are tests to ensure that changes do not un-intended behaviour or additional errors. 2 set of activities that ensure that software is correct., a test done by the developer.</Question>
+        <Question answer="1">Q2: what is alpha testing? 1 a test that is conducted at the developers site by a customer. 2 the correct test for software beginners guide to testing.</Question>
+        <Question answer="1">Q1: What is beta testing ? 1 a test that is condcuted at one or more customer sites by the end user of the software 2 free product, bored.</Question>
+    </SWQD>
+</Root>
