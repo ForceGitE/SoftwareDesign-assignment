@@ -406,7 +406,7 @@ int main()
     cout<<"log in names: peter warren eoin ciaran admin\npasswords: pp ww ee cc admin\n\n"
         <<"the createXML in main is commented out as we do not want to create a file every time we run main\n"
         <<"we only want to read the file everytime"<<endl;
-        //type answer 1, 1, 1, 1, 2, 1, 3, 2, 1, 10 and you should get 10 perfect score
+    //type answer 1, 1, 1, 1, 2, 1, 3, 2, 1, 10 and you should get 10 perfect score
 
     while(cin>>studentname>>password)
     {
